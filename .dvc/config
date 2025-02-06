@@ -1,0 +1,4 @@
+[core]
+    remote = 1st_data_set
+['remote "1st_data_set"']
+    url = ../Dataset
