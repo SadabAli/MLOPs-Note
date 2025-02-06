@@ -15,6 +15,9 @@ df = pd.DataFrame(data)
 new_row = {"Name": "priyanka", "Age": 20, "City": "Kendrapara"}
 df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
 
+new_row = {"Name": "Simpal", "Age": 20, "City": "BBSR"}
+df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+
 # Define the directory path
 data_dir = r'C:\Users\alisa\OneDrive\Desktop\MLOPs Note\Data Versining by using DVC'
 
