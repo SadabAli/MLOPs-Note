@@ -1,0 +1,16 @@
+# pip install dvc
+Create .py file 
+Do a "git add-commit-push" before initialize dvc
+Now "dvc init"
+create new folder jiss me data ka virsion rahega.
+"dvc remote add -d <variable> <data folder name>"
+"dvc add <Data folder name/>"
+    if error(output already travk by SCM) then
+        git rm -r --cached 'Dataset folder'
+        git commit -m "stop tracking data"
+    dvc add <Data folder name/>
+dvc commit and push (push karne ke baad data <dataset file> me data store ho jayega)
+ Do some code like Feature engineering and encodding , check the changes via "dvc status"
+ if modified then "dvc commit push"
+ Do some code like Feature engineering and encodding , check the changes via "dvc status"
+ if modified then "dvc commit push"
