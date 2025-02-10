@@ -1,0 +1,25 @@
+2025-02-10 23:48:28,163 - model_evaluation - ERROR - File not found: params.yaml
+2025-02-10 23:48:28,163 - model_evaluation - ERROR - Failed to complete the model evaluation process: [Errno 2] No such file or directory: 'params.yaml'
+2025-02-10 23:51:20,926 - model_evaluation - DEBUG - Parameters retrieved from params.yaml
+2025-02-10 23:51:21,024 - model_evaluation - DEBUG - Model loaded from ./models/model.pkl
+2025-02-10 23:51:21,025 - model_evaluation - DEBUG - Data loaded from C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data\raw\test.csv
+2025-02-10 23:51:21,032 - model_evaluation - ERROR - Error during model evaluation: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2025-02-10 23:51:21,033 - model_evaluation - ERROR - Failed to complete the model evaluation process: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2025-02-10 23:53:24,818 - model_evaluation - DEBUG - Parameters retrieved from params.yaml
+2025-02-10 23:53:24,818 - model_evaluation - ERROR - Unexpected error: 'NoneType' object has no attribute 'get'
+2025-02-10 23:53:24,818 - model_evaluation - ERROR - Failed to complete the model evaluation process: 'NoneType' object has no attribute 'get'
+2025-02-10 23:55:06,135 - model_evaluation - WARNING - YAML file is empty or invalid. Using default parameters.
+2025-02-10 23:55:06,254 - model_evaluation - DEBUG - Model loaded from ./models/model.pkl
+2025-02-10 23:55:06,256 - model_evaluation - DEBUG - Data loaded from C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data\raw\test.csv
+2025-02-10 23:55:06,267 - model_evaluation - ERROR - Error during model evaluation: axis 1 is out of bounds for array of dimension 1
+2025-02-10 23:55:06,267 - model_evaluation - ERROR - Failed to complete the model evaluation process: axis 1 is out of bounds for array of dimension 1
+2025-02-11 00:00:42,682 - model_evaluation - WARNING - YAML file is empty or invalid. Using default parameters.
+2025-02-11 00:00:42,878 - model_evaluation - DEBUG - Model loaded from ./models/model.pkl
+2025-02-11 00:00:42,880 - model_evaluation - DEBUG - Data loaded from C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data\raw\test.csv
+2025-02-11 00:00:42,888 - model_evaluation - ERROR - Error during model evaluation: axis 1 is out of bounds for array of dimension 1
+2025-02-11 00:00:42,888 - model_evaluation - ERROR - Failed to complete the model evaluation process: axis 1 is out of bounds for array of dimension 1
+2025-02-11 00:02:23,197 - model_evaluation - WARNING - YAML file is empty or invalid. Using default parameters.
+2025-02-11 00:02:23,308 - model_evaluation - DEBUG - Model loaded from ./models/model.pkl
+2025-02-11 00:02:23,310 - model_evaluation - DEBUG - Data loaded from C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data\raw\test.csv
+2025-02-11 00:02:23,324 - model_evaluation - DEBUG - Model evaluation metrics calculated
+2025-02-11 00:02:25,747 - model_evaluation - DEBUG - Metrics saved to reports/metrics.json

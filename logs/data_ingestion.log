@@ -1,0 +1,18 @@
+2025-02-10 16:09:40,775 - data_ingestion - ERROR - Unexpected error occurred while loading the data: argument of type 'method' is not iterable
+2025-02-10 16:09:40,776 - data_ingestion - ERROR - Failed to complete the data ingestion process: argument of type 'method' is not iterable
+2025-02-10 16:13:09,524 - data_ingestion - ERROR - Unexpected error occurred while loading the data: argument of type 'method' is not iterable
+2025-02-10 16:13:09,524 - data_ingestion - ERROR - Failed to complete the data ingestion process: argument of type 'method' is not iterable
+2025-02-10 16:51:42,034 - data_ingestion - ERROR - Failed to complete the data ingestion process: load_data() got an unexpected keyword argument 'data_url'
+2025-02-10 22:57:47,225 - data_ingestion - ERROR - Failed to complete the data ingestion process: load_data() got an unexpected keyword argument 'data_url'
+2025-02-10 23:00:15,222 - data_ingestion - ERROR - Failed to complete the data ingestion process: load_data() got an unexpected keyword argument 'data_url'
+2025-02-10 23:03:35,062 - data_ingestion - ERROR - Problem in LableEncoder: string indices must be integers, not 'str'
+2025-02-10 23:03:35,062 - data_ingestion - ERROR - Failed to complete the data ingestion process: string indices must be integers, not 'str'
+2025-02-10 23:05:53,246 - data_ingestion - ERROR - Problem in LableEncoder: string indices must be integers, not 'str'
+2025-02-10 23:05:53,249 - data_ingestion - ERROR - Failed to complete the data ingestion process: string indices must be integers, not 'str'
+2025-02-10 23:07:31,269 - data_ingestion - ERROR - Unexpected error occurred while loading the data: argument of type 'method' is not iterable
+2025-02-10 23:07:31,269 - data_ingestion - ERROR - Failed to complete the data ingestion process: argument of type 'method' is not iterable
+2025-02-10 23:10:07,993 - data_ingestion - ERROR - Unexpected error occurred while loading the data: argument of type 'method' is not iterable
+2025-02-10 23:10:07,993 - data_ingestion - ERROR - Failed to complete the data ingestion process: argument of type 'method' is not iterable
+2025-02-10 23:11:48,155 - data_ingestion - DEBUG - Using provided DataFrame
+2025-02-10 23:11:48,158 - data_ingestion - DEBUG - Data preprocessing completed
+2025-02-10 23:11:48,163 - data_ingestion - DEBUG - Train and test data saved to ./data\raw

@@ -14,3 +14,18 @@ dvc commit and push (push karne ke baad data <dataset file> me data store ho jay
  if modified then "dvc commit push"
  Do some code like Feature engineering and encodding , check the changes via "dvc status"
  if modified then "dvc commit push"
+
+
+ now reuse the dataset
+
+ git log--oneline
+ git checkout <hash/shaid>(after this line me piche chala jaunga jaya mera purana dataset tha)
+ git checkout main
+ dvc pull --force
+
+
+ how to get latest data
+ git checkout main
+ dvc pull (check karo aaya hai ya nai if nahi the manually karo)
+
+ git log --oneline-> copy shaid->git checkout id->dvc pull(maybe kam kar jana cahiye)

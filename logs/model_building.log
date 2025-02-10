@@ -1,0 +1,8 @@
+2025-02-10 23:40:38,327 - model_building - ERROR - File not found: params.yaml
+2025-02-10 23:40:38,328 - model_building - ERROR - Failed to complete the model building process: [Errno 2] No such file or directory: 'params.yaml'
+2025-02-10 23:42:36,209 - model_building - WARNING - File not found: params.yaml. Using default parameters.
+2025-02-10 23:42:36,215 - model_building - DEBUG - Data loaded from C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data\raw\train.csv
+2025-02-10 23:42:36,216 - model_building - DEBUG - Initializing RandomForest model with parameters: {'n_estimators': 100, 'random_state': 42}
+2025-02-10 23:42:36,217 - model_building - DEBUG - Model training started with 120 samples
+2025-02-10 23:42:36,300 - model_building - DEBUG - Model training completed
+2025-02-10 23:42:36,305 - model_building - DEBUG - Model saved to models\model.pkl

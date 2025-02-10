@@ -1,0 +1,85 @@
+Building Pipeline:
+    1. Create a git repo 
+    2.Create src folder witl all component(run them individually)
+    3. add data,model,report dictionary to .gitignore file
+    4. git add,commit,push
+Setting up dvc Pipeline (without prameters)
+    1.create dvc.yaml file and add stages to it.
+    2. dvc init the do "dvc repro" to test the pipeline automation (check dvc dag)
+    3. git add,commit,push
+Setting up dvc Pipeline (with prameters)
+    1.create params.yaml file
+    2. add the params setup (mention below)
+    3. do "dvc repro" to test the params4. git add,commit,push 
+Experiment with dvc
+    1. pip install dvclive
+    2. add the dvclive code block(mention below)
+    3. do "dvc exp run" , it will create a new dvc.yaml(if already not there) and dvclive directory (each run will be considered as an experiment by DVC)
+    4. do "dvc exp show" on terminal to see the experiments or use extension on VSCode (install dvc extention)
+    5. do "dvc exp remove <exp name>" to remove exp | "dvc exp apply <remove exp name>" to reproducee prev. exp
+    6. change params, re-run code (produced new experiments)
+    7. git add,commit,push 
+Adding a remote S3 storage to DVC
+    1.crate IAM user 
+    2. Create S3 
+    3.pip install dvc[s3]
+    4. pip install awscli 
+    5. aws configure 
+    6.dvc remote add -d dvcstore s3://bucketname
+    7. dvc mo==commit,push the exp outcome that you want to keep 
+    8. git add,commit,push
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+params.yaml setup:
+1> import yaml
+2> add func:
+def load_params(params_path: str) -> dict:
+    """Load parameters from a YAML file."""
+    try:
+        with open(params_path, 'r') as file:
+            params = yaml.safe_load(file)
+        logger.debug('Parameters retrieved from %s', params_path)
+        return params
+    except FileNotFoundError:
+        logger.error('File not found: %s', params_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('YAML error: %s', e)
+        raise
+    except Exception as e:
+        logger.error('Unexpected error: %s', e)
+        raise
+3> Add to main():
+
+# data_ingestion
+params = load_params(params_path='params.yaml')
+test_size = params['data_ingestion']['test_size']
+
+# feature_engineering
+params = load_params(params_path='params.yaml')
+max_features = params['feature_engineering']['max_features']
+
+# model_building
+params = load_params('params.yaml')['model_building']
+
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+
+dvclive code block:
+1> import dvclive and yaml:
+from dvclive import Live
+import yaml
+2> Add the load_params function and initiate "params" var in main
+3> Add below code block to main:
+with Live(save_dvc_exp=True) as live:
+    live.log_metric('accuracy', accuracy_score(y_test, y_test))
+    live.log_metric('precision', precision_score(y_test, y_test))
+    live.log_metric('recall', recall_score(y_test, y_test))
+
+    live.log_params(params)
