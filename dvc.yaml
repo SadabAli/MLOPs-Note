@@ -1,50 +1,52 @@
 params:
-- dvclive/params.yaml
+  - dvclive/params.yaml
 metrics:
-- dvclive/metrics.json
+  - dvclive/metrics.json
 plots:
-- dvclive/plots/metrics:
-    x: step
+  - dvclive/plots/metrics:
+      x: step
 
 stages:
   data_ingestion:
-    cmd: ML Pipeline using DVC and AWS S3/C:\Users\alisa\OneDrive\Desktop\MLOPs Note\data_integration.py
+    cmd: ML Pipeline using DVC and AWS S3/C:\Users\alisa\OneDrive\Desktop\MLOPs
+      Note\data_integration.py
     deps:
-    - ML Pipeline using DVC and AWS S3/C:\Users\alisa\OneDrive\Desktop\MLOPs Note\cdata_integration.py
+      - ML Pipeline using DVC and AWS S3/C:\Users\alisa\OneDrive\Desktop\MLOPs
+        Note\cdata_integration.py
     params:
-    - data_ingestion.test_size
+      - data_ingestion.test_size
     outs:
-    - data/raw
+      - data/raw
   data_preprocessing:
     cmd: python ML Pipeline using DVC and AWS S3/data_preprocessing.py
     deps:
-    - data/raw
-    - ML Pipeline using DVC and AWS S3/data_preprocessing.py
+      - data/raw
+      - ML Pipeline using DVC and AWS S3/data_preprocessing.py
     outs:
-    - data/interim
+      - data/interim
   feature_engineering:
     cmd: python src/feature_engineering.py
     deps:
-    - data/interim
-    - ML Pipeline using DVC and AWS S3/feature_engineering.py
+      - data/interim
+      - ML Pipeline using DVC and AWS S3/feature_engineering.py
     params:
-    - feature_engineering.max_features
+      - feature_engineering.max_features
     outs:
-    - data/processed
+      - data/processed
   model_building:
     cmd: python ML Pipeline using DVC and AWS S3/model_building.py
     deps:
-    - data/processed
-    - ML Pipeline using DVC and AWS S3/model_building.py
+      - data/processed
+      - ML Pipeline using DVC and AWS S3/model_building.py
     params:
-    - model_building.n_estimators
-    - model_building.random_state
+      - model_building.n_estimators
+      - model_building.random_state
     outs:
-    - models/model.pkl
+      - models/model.pkl
   model_evaluation:
     cmd: python ML Pipeline using DVC and AWS S3/model_evaluation.py
     deps:
-    - models/model.pkl
-    - ML Pipeline using DVC and AWS S3/model_evaluation.py
+      - models/model.pkl
+      - ML Pipeline using DVC and AWS S3/model_evaluation.py
     metrics:
-    - reports/metrics.json
+      - reports/metrics.json
