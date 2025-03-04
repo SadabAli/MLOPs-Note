@@ -16,3 +16,6 @@
 2025-02-10 23:11:48,155 - data_ingestion - DEBUG - Using provided DataFrame
 2025-02-10 23:11:48,158 - data_ingestion - DEBUG - Data preprocessing completed
 2025-02-10 23:11:48,163 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
+2025-03-03 10:02:55,070 - data_ingestion - DEBUG - Using provided DataFrame
+2025-03-03 10:02:55,071 - data_ingestion - DEBUG - Data preprocessing completed
+2025-03-03 10:02:55,077 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
